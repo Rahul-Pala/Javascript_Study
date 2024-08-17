@@ -304,3 +304,65 @@ const ageOne = CalAge(years[0])
 const ageTwo = CalAge(years[2])
 const ageThree = CalAge(years[4])
 console.log(ageOne, ageTwo, ageThree)
+
+//PUSH - Adds elements to the end of an Array
+const mFriend = ["Rahul", "Pala", "Simon"]
+mFriend.push("Amit")
+console.log(mFriend)
+
+//unshift - adds elements to beginning of an array
+mFriend.unshift("Ridhi")
+console.log(mFriend)
+
+//Remove elements - Last
+mFriend.pop()
+console.log(mFriend)
+
+//Remove elements - First
+mFriend.shift()
+console.log(mFriend)
+
+//indexOf
+console.log(mFriend.indexOf("Pala"))
+
+//includes
+console.log(mFriend.includes("Rahul"))
+console.log(mFriend.includes("Bob"))
+
+//if
+if (mFriend.includes("Rahul")) {
+    console.log("My name is Rahul")
+}
+
+//Challenge #2
+
+//Arrow Function
+// const calcTip = bill => bill >=50 && bill <=300 ? bill * 0.15 : bill * 0.20
+
+const calcTip = function(bill) {
+    if (bill >= 50 && bill <=300) {
+        return bill * 0.15
+    }
+
+    else return bill * 0.2
+
+    //return bill >=50 && bill <=300 ? bill * 0.15 : bill * 0.20;
+}
+
+const givenTip = calcTip(100)
+console.log(givenTip)
+
+const bills = [125, 555, 44]
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+console.log(tips)
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+console.log(totals)
+
+//OBJECTS
+//Key - Value pairs
+
+    
+
+
