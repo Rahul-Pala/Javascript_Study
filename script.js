@@ -362,7 +362,153 @@ console.log(totals)
 
 //OBJECTS
 //Key - Value pairs
+const Raahul = {
+firstName : "Rahul", 
+lastName : "Pala",
+birthYear: 1991,
+job : "Software Engineer", 
+Friends : ["Mitesh", "Monish", "Aditya"],
+hasDriverLicence : true,
 
-    
+calcuAge : function() {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+} ,
+
+getSummary : function() {
+return `${this.firstName} id s ${this.calcuAge} year young boy`
+} 
+} ;
+console.log(Raahul.getSummary)
+
+console.log(Raahul.age)
+console.log(Raahul.calcuAge(2005))
+
+// calcuAge : function (birthYear) {
+//     console.log(this)
+//     return 2024 - birthYear
+// }
+//Same as:
+// const calcuAge = function(birthYear) {
+//return 2024 - 1989}
+
+//Any function that is attached to an object is called a method.
+
+
+console.log(Raahul)
+console.log(Raahul.calcuAge(2000));
+console.log(Raahul['calcuAge'](2001))
+
+
+//43
+//Dot Notation. E.g., To get lastName
+console.log(Raahul.lastName)
+
+
+//Brackets Notation
+console.log(Raahul['lastName'])
+const nameKey = "Name"
+console.log(Raahul['first' + nameKey])
+console.log(Raahul['last' + nameKey])
+
+//const interestedIn = prompt('What do you want to know about Raahul? firstName, lastName, age')
+
+// if (Raahul[interestedIn]) {
+//     console.log(Raahul[interestedIn])
+// } else {
+//     console.log("Wrong Request")
+// }
+
+Raahul.location = "Melbourne",
+Raahul['degree'] = "Computer Science"
+console.log(Raahul)
+
+//Challenge
+console.log(` ${Raahul.firstName} has ${Raahul.Friends.length} friends, best friend is ${Raahul.Friends[1]}`)
+
+//Challenge #3
+const mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function() {
+        this.bmi =  this.mass / (this.height * this.height)
+        return this.bmi
+    }
+}
+
+mark.calcBMI()
+console.log(mark.bmi)
+console.log(mark)
+
+const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+
+calcBMI: function() {
+     this.bmi =  this.mass / (this.height * this.height)
+     return this.bmi
+}
+}
+john.calcBMI()
+console.log(john.bmi)
+console.log(john)
+
+//Iteration : The For Loop
+//similar to if else statement, but its for loop
+//has 3 parts
+
+//for loop keeps running while condition is TRUE
+// for(let rep = 1; rep <=10; rep = rep++) {
+//     console.log(`Lifting weights repetition ${rep}`)
+// }
+
+const raul = [
+     "Rahul", 
+     "Pala",
+    1991,
+    "Software Engineer", 
+    ["Mitesh", "Monish", "Aditya"],
+    true,
+]
+
+const types = [];
+//Reading from Array
+for(let i = 0; i < raul.length; i++) {
+    console.log(raul[i], typeof raul[i])
+
+types[i] = typeof raul[i]
+types.push(typeof raul[i]);
+}
+
+//Filling types Array
+
+console.log(types)
+
+//Example of calculating age
+const yeahs = [198, 1988, 1989, 1990]
+const agge = []
+
+for(i = 0; i <= yeahs.length; i++) {
+    agge.push(2024 - yeahs[i]) //push pushes it to the end of array
+}
+console.log(agge)
+
+//Continue and break
+//So continue - is to exit the current iteration of the loop
+//and continue to the next one.
+
+// break is used to completely terminate the whole loop.
+
+
+
+
+
+
+
+
+
 
 
