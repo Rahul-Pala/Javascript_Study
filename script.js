@@ -499,8 +499,85 @@ console.log(agge)
 //Continue and break
 //So continue - is to exit the current iteration of the loop
 //and continue to the next one.
+console.log("---Only Strings---")
+for (let i=0; i <raul.length; i++) {
+    if(typeof raul[i] !== "string") continue;
+
+    console.log(raul[i], typeof raul[i]);
+}
 
 // break is used to completely terminate the whole loop.
+console.log("---Break with Number---")
+for (let i=0; i <raul.length; i++) {
+    if(typeof raul[i] ==="number") break;
+
+    console.log(raul[i], typeof raul[i]);
+}
+
+//For loop going Backwards
+for(let i = raul.length - 1; i >= 0; i-- ) {
+    console.log(i, raul[i])
+}
+
+//Creating Loop inside loop
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`Starting exerise ${exercise}`);
+
+for (let rep = 1; rep <=5; rep++) {
+    console.log(`Repetition ${rep}`)
+}
+
+for (let strength = 1; strength <=2; strength++) {
+    console.log(`Strength ${strength}`)
+}
+}
+
+//While Loop
+let rep = 1;
+while (rep <= 10) {
+    console.log(`while loop ${rep}`)
+    rep++
+}
+
+//While loop example
+//roll a dice and keep rolling the dice, until we get a 6.
+let dice = Math.trunc(Math.random() * 6) + 1//math.random will create a number between 0 and 1
+                        //math.trunc will give a whole number
+                              //a random number pops up every time. 
+while (dice !==6) {
+    console.log(`you rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log(`dice is ${dice}`)
+}
+
+const myBills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const myTips = []
+const mytotal = []
+
+const calculateTip = function(myBill) {
+    return myBill >= 50 && myBill <= 300 ? myBill * 0.15 : myBill * 0.2;
+}
+
+const calculateTotal = function(myBill) {
+    return myBill >= 50 && myBill <= 300 ? myBill + (myBill * 0.15) : myBill + (myBill * 0.2);
+}
+
+const tippy = calculateTip(50)
+console.log(tippy)
+
+for (i = 0; i < myBills.length; i++) {
+    myTips.push(calculateTip(myBills[i]))
+}
+console.log(myTips)
+
+for (i = 0; i < myBills.length; i++) {
+    mytotal.push(calculateTotal(myBills[i]))
+}
+console.log(mytotal)
+
+
+
+
 
 
 
