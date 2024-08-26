@@ -575,6 +575,26 @@ for (i = 0; i < myBills.length; i++) {
 }
 console.log(mytotal)
 
+const measureKelvin = function(x, y) {
+    const measurement = {
+        type: "temp",
+        unit: "celsius",
+        valuue: (`hello ${x} ${y}`)
+    }
+
+const kelvinValue = measurement.valuue + ". You are the BEST"
+return kelvinValue
+}
+
+console.log(measureKelvin("Rahul", "Pala"))
+console.log(measureKelvin("Ra00ul", "Pala"))
+console.log(measureKelvin("Raul", "Pala"))
+
+//Section 7
+//Project 1// GUESS MY NUMBER
+
+
+
 
 
 
